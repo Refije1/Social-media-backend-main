@@ -37,6 +37,7 @@ export const register = async (req, res) => {
       confirmPassword: passwordHash,
       gender,
       birthday,
+      verified: true,
     });
 
     const savedUser = await newUser.save();

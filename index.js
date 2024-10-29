@@ -10,8 +10,8 @@ import postRoutes from "./routes/posts.js";
 import userRoutes from "./routes/users.js";
 import commentRoutes from "./routes/comment.routes.js";
 import productRoutes from "./routes/product.js";
-import chatRoutes from "./routes/chat.routes.js"
-import messagesRoutes from "./routes/messages.routes.js"
+import chatRoutes from "./routes/chat.routes.js";
+import messagesRoutes from "./routes/messages.routes.js";
 
 dotenv.config();
 
@@ -33,8 +33,8 @@ app.use(userRoutes);
 app.use(commentRoutes);
 app.use(friendsRoutes);
 app.use(productRoutes);
-app.use('/chat', chatRoutes);
-app.use('/message', messagesRoutes);
+app.use("/chat", chatRoutes);
+app.use("/message", messagesRoutes);
 
 const MONGO_URL = process.env.MONGO_URL;
 const PORT = process.env.PORT || 9999;
@@ -55,3 +55,6 @@ try {
 app.listen(PORT, () => {
   console.log(`Listening on PORT ${PORT}`);
 });
+
+// Correct export
+export default app;
